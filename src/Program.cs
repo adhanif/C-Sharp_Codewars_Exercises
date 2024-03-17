@@ -19,5 +19,46 @@
 //         string newString = Regex.Replace(input, "[aeiouAEIOU]", "");
 //         return newString;
 //     }
+// }
 
+
+// Chalenge#2:Define String.prototype.toAlternatingCase (or a similar function/method such as to_alternating_case/toAlternatingCase/ToAlternatingCase in your selected language; see the initial solution for details) such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase. For example:
+
+// "hello world".ToAlternatingCase() == "HELLO WORLD"
+// "HELLO WORLD".ToAlternatingCase() == "hello world"
+// "hello WORLD".ToAlternatingCase() == "HELLO world"
+// "HeLLo WoRLD".ToAlternatingCase() == "hEllO wOrld"
+// "12345".ToAlternatingCase() == "12345" // Non-alphabetical characters are unaffected
+// "1a2b3c4d5e".ToAlternatingCase() == "1A2B3C4D5E"
+// "String.ToAlternatingCase".ToAlternatingCase() == "sTRING.tOaLTERNATINGcASE"
+
+//Solution:
+
+// namespace Extensions
+// {
+//     public static class StringExt
+//     {
+//         public static void Main(string[] args)
+//         {
+//             string input = "Hello World";
+//             string result = input.ToAlternatingCase();
+//             Console.WriteLine(result);
+//         }
+//         public static string ToAlternatingCase(this string s)
+//         {
+//             char[] newChars = new char[s.Length];
+//             for (var i = 0; i < s.Length; i++)
+//             {
+//                 if (s[i] == char.ToUpper(s[i]))
+//                 {
+//                     newChars[i] = char.ToLower(s[i]);
+//                 }
+//                 else if (s[i] == char.ToLower(s[i]))
+//                 {
+//                     newChars[i] = char.ToUpper(s[i]);
+//                 }
+//             }
+//             return new String(newChars);
+//         }
+//     }
 // }
