@@ -22,7 +22,7 @@
 // }
 
 
-// Chalenge#2:Define String.prototype.toAlternatingCase (or a similar function/method such as to_alternating_case/toAlternatingCase/ToAlternatingCase in your selected language; see the initial solution for details) such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase. For example:
+// Chalenge#2: Define String.prototype.toAlternatingCase (or a similar function/method such as to_alternating_case/toAlternatingCase/ToAlternatingCase in your selected language; see the initial solution for details) such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase. For example:
 
 // "hello world".ToAlternatingCase() == "HELLO WORLD"
 // "HELLO WORLD".ToAlternatingCase() == "hello world"
@@ -61,4 +61,50 @@
 //             return new String(newChars);
 //         }
 //     }
+// }
+
+// // Chalenge#3: Task Given a list of unique numbers sorted in ascending order, return a new list so that the values increment by 1 for each index from the minimum value up to the maximum value (both included).
+
+// Example
+// Input:  1,3,5,6,7,8 Output: 1,2,3,4,5,6,7,8
+
+
+// //solution
+// using System.Collections.Generic;
+// using System.Linq;
+
+// namespace Fixer
+// {
+//     public class Fixer
+//     {
+
+//         public static void Main(string[] args)
+//         {
+//             List<int> newList = new() { 1, 3, 5, 6, 7, 8 };
+//             var result = PipeFix(newList);
+//             foreach (int num in result)
+//             {
+//                 Console.WriteLine(num);
+//             }
+//         }
+//         public static List<int> PipeFix(List<int> numbers)
+//         {
+
+
+//             for (var i = 0; i < numbers.Count - 1; i++)
+//             {
+//                 if ((numbers[i + 1] - numbers[i]) != 1)
+//                 {
+//                     numbers.Insert(i + 1, numbers[i] + 1);
+//                 }
+//                 else
+//                 {
+//                     continue;
+//                 }
+//             }
+//             return numbers;
+//         }
+
+//     }
+
 // }
